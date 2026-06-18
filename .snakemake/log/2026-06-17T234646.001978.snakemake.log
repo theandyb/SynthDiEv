@@ -1,0 +1,665 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_paired_vcf       20
+diploidifier            25
+total                   46
+
+Select jobs to execute...
+
+[Wed Jun 17 23:46:46 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+    jobid: 69
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:46 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+    jobid: 27
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:46 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf
+    jobid: 18
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:46 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+    jobid: 63
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:46 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+    jobid: 48
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:56 2026]
+Finished job 27.
+1 of 46 steps (2%) done
+Removing temporary output data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:46:56 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    jobid: 10
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:56 2026]
+Finished job 18.
+2 of 46 steps (4%) done
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:46:56 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG01630.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    jobid: 55
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:56 2026]
+Finished job 63.
+3 of 46 steps (7%) done
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:46:56 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG00109.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    jobid: 52
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:57 2026]
+Finished job 48.
+4 of 46 steps (9%) done
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:46:57 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    jobid: 67
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:57 2026]
+Finished job 69.
+5 of 46 steps (11%) done
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:46:57 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    jobid: 13
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:59 2026]
+Finished job 55.
+6 of 46 steps (13%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:46:59 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG01630_test.vcf, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf
+    jobid: 54
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf; Input files updated by another job: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:59 2026]
+Finished job 52.
+7 of 46 steps (15%) done
+[Wed Jun 17 23:46:59 2026]
+Finished job 10.
+8 of 46 steps (17%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:46:59 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG00109_test.vcf, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf
+    jobid: 51
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf; Input files updated by another job: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:59 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG00138_vs_HG01630_test.vcf, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf
+    jobid: 9
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG01630_test.vcf, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:59 2026]
+Finished job 67.
+9 of 46 steps (20%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:46:59 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf
+    jobid: 66
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Wed Jun 17 23:46:59 2026]
+Finished job 13.
+10 of 46 steps (22%) done
+
+[Wed Jun 17 23:47:00 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG00138_vs_NA12760_test.vcf, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf
+    jobid: 12
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_NA12760_test.vcf, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:10 2026]
+Finished job 51.
+11 of 46 steps (24%) done
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:10 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    jobid: 2
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:10 2026]
+Finished job 54.
+12 of 46 steps (26%) done
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz.
+[Wed Jun 17 23:47:10 2026]
+Finished job 66.
+13 of 46 steps (28%) done
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:10 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    jobid: 7
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:47:10 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    jobid: 73
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Wed Jun 17 23:47:10 2026]
+Finished job 9.
+14 of 46 steps (30%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz.
+
+[Wed Jun 17 23:47:10 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    jobid: 46
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:10 2026]
+Finished job 12.
+15 of 46 steps (33%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:10 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    jobid: 37
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:13 2026]
+Finished job 2.
+16 of 46 steps (35%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:13 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf
+    jobid: 1
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:13 2026]
+Finished job 73.
+17 of 46 steps (37%) done
+[Wed Jun 17 23:47:13 2026]
+Finished job 46.
+18 of 46 steps (39%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:13 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    output: data/processed/diploid/input_HG01686_vs_HG02233_test.vcf, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf
+    jobid: 45
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:13 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_NA12760_test.vcf, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf
+    jobid: 72
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:13 2026]
+Finished job 7.
+19 of 46 steps (41%) done
+[Wed Jun 17 23:47:13 2026]
+Finished job 37.
+20 of 46 steps (43%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:13 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    output: data/processed/diploid/input_HG01686_vs_HG00109_test.vcf, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf
+    jobid: 36
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:13 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    output: data/processed/diploid/input_HG00138_vs_HG00109_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf
+    jobid: 6
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG00109_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Wed Jun 17 23:47:23 2026]
+Finished job 6.
+21 of 46 steps (46%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz.
+
+[Wed Jun 17 23:47:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    jobid: 22
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:23 2026]
+Finished job 36.
+22 of 46 steps (48%) done
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz.
+[Wed Jun 17 23:47:23 2026]
+Finished job 45.
+23 of 46 steps (50%) done
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    jobid: 43
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:47:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_NA12760.tsv
+    output: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    jobid: 58
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Wed Jun 17 23:47:23 2026]
+Finished job 1.
+24 of 46 steps (52%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz.
+
+[Wed Jun 17 23:47:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG02233.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    jobid: 61
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:23 2026]
+Finished job 72.
+25 of 46 steps (54%) done
+Removing temporary output data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    jobid: 16
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:25 2026]
+Finished job 22.
+26 of 46 steps (57%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:26 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG00109_test.vcf, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf
+    jobid: 21
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00109_test.vcf, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:26 2026]
+Finished job 58.
+27 of 46 steps (59%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:26 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf
+    jobid: 57
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf; Input files updated by another job: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:26 2026]
+Finished job 43.
+28 of 46 steps (61%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:26 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG01686_vs_NA12760_test.vcf, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf
+    jobid: 42
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:26 2026]
+Finished job 61.
+29 of 46 steps (63%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:26 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG02233_test.vcf, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf
+    jobid: 60
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG02233_test.vcf, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf; Input files updated by another job: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:26 2026]
+Finished job 16.
+30 of 46 steps (65%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:26 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    output: data/processed/diploid/input_HG00138_vs_HG02233_test.vcf, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf
+    jobid: 15
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf; Input files updated by another job: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:35 2026]
+Finished job 21.
+31 of 46 steps (67%) done
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:35 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    jobid: 76
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:36 2026]
+Finished job 42.
+32 of 46 steps (70%) done
+Removing temporary output data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:36 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    jobid: 40
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:36 2026]
+Finished job 57.
+33 of 46 steps (72%) done
+Removing temporary output data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:36 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    jobid: 34
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:36 2026]
+Finished job 60.
+34 of 46 steps (74%) done
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:36 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    jobid: 31
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:36 2026]
+Finished job 15.
+35 of 46 steps (76%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:36 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    jobid: 25
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:38 2026]
+Finished job 76.
+36 of 46 steps (78%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:38 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG02233_test.vcf, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf
+    jobid: 75
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG02233_test.vcf, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:38 2026]
+Finished job 40.
+37 of 46 steps (80%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:38 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG01686_vs_HG01630_test.vcf, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf
+    jobid: 39
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:38 2026]
+Finished job 34.
+38 of 46 steps (83%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:38 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG01686_vs_HG00142_test.vcf, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf
+    jobid: 33
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf; Input files updated by another job: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:39 2026]
+Finished job 31.
+39 of 46 steps (85%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:39 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG02233_test.vcf, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf
+    jobid: 30
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG02233_test.vcf, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf; Input files updated by another job: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:39 2026]
+Finished job 25.
+40 of 46 steps (87%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:47:39 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG01630_test.vcf, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf
+    jobid: 24
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf; Input files updated by another job: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:48 2026]
+Finished job 39.
+41 of 46 steps (89%) done
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz.
+[Wed Jun 17 23:47:48 2026]
+Finished job 33.
+42 of 46 steps (91%) done
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz.
+[Wed Jun 17 23:47:48 2026]
+Finished job 75.
+43 of 46 steps (93%) done
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz.
+[Wed Jun 17 23:47:49 2026]
+Finished job 30.
+44 of 46 steps (96%) done
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz.
+[Wed Jun 17 23:47:49 2026]
+Finished job 24.
+45 of 46 steps (98%) done
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz.
+Select jobs to execute...
+
+[Wed Jun 17 23:47:49 2026]
+localrule all:
+    input: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf
+    jobid: 0
+    reason: Input files updated by another job: data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:47:49 2026]
+Finished job 0.
+46 of 46 steps (100%) done
+Complete log: .snakemake/log/2026-06-17T234646.001978.snakemake.log

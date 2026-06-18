@@ -1,0 +1,152 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_paired_vcf       25
+diploidifier            25
+total                   51
+
+Select jobs to execute...
+
+[Wed Jun 17 23:40:24 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    jobid: 28
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:40:24 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    jobid: 19
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:40:24 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    jobid: 64
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:40:24 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG00142.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    jobid: 49
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:40:24 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    jobid: 70
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:40:27 2026]
+Finished job 64.
+1 of 51 steps (2%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:40:27 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG00142.vcf.gz
+    jobid: 63
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00142.vcf.gz; Input files updated by another job: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:40:27 2026]
+Finished job 19.
+2 of 51 steps (4%) done
+[Wed Jun 17 23:40:27 2026]
+Finished job 49.
+3 of 51 steps (6%) done
+[Wed Jun 17 23:40:27 2026]
+Finished job 70.
+4 of 51 steps (8%) done
+[Wed Jun 17 23:40:27 2026]
+Finished job 28.
+5 of 51 steps (10%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:40:27 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG01630.vcf.gz
+    jobid: 69
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG01630.vcf.gz; Input files updated by another job: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:40:27 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG00142.vcf.gz
+    jobid: 18
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00142.vcf.gz; Input files updated by another job: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:40:27 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_NA12760.vcf.gz
+    jobid: 27
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_NA12760.vcf.gz; Input files updated by another job: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:40:27 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG00142.vcf.gz
+    jobid: 48
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00142.vcf.gz; Input files updated by another job: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule diploidifier in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 78:
+Job 18  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/processed/diploid/input_HG00252_vs_HG00142.vcf.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule diploidifier in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 78:
+Job 48  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/processed/diploid/input_NA11881_vs_HG00142.vcf.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule diploidifier in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 78:
+Job 63  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/processed/diploid/input_HG01608_vs_HG00142.vcf.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule diploidifier in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 78:
+Job 69  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/processed/diploid/input_HG01608_vs_HG01630.vcf.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule diploidifier in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 78:
+Job 27  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/processed/diploid/input_HG00252_vs_NA12760.vcf.gz
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-06-17T234023.970359.snakemake.log

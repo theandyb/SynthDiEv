@@ -1,0 +1,222 @@
+import pandas as pd
+
+configfile: "config/config.yaml"
+
+pairs_df = pd.read_csv("config/pairs.txt", sep="\t", header=None, names=['p1','p2'])
+PAIRS = list(pairs_df.itertuples(index=False, name=None))
+
+VCF_RAW = "data/raw/chrX.bcf"
+PAR_BED = "data/raw/chrX_par.bed"
+
+SHAPEIT_DIR="/net/snowwhite/home/beckandy/software/shapeit5/shapeit5"
+shapeit_map="${shapeit_dir}/resources/maps/b38/chrX.b38.gmap.gz"
+
+rule all:
+    input:
+        expand([
+            "data/processed/switch_errors/shapeit/error_{p1}_{p2}.diff.switch",
+            "data/processed/whatshap/shapeit/eval_{p1}_{p2}.tsv"
+        ], p1=[p[0] for p in PAIRS], p2=[p[1] for p in PAIRS])
+
+rule remove_par:
+    """Step 1: Remove PAR regions from the main BCF using the BED file."""
+    input:
+        bcf = VCF_RAW,
+        bed = PAR_BED
+    output:
+        filtered_bcf = "data/processed/chrX_no_par.bcf",
+        bcf_index = "data/processed/chrX_no_par.bcf.csi"
+    conda:
+        "envs/bcftools.yaml"
+    shell:
+        # -T ^means "targets to exclude" based on the provided BED file
+        # -Ob outputs a compressed BCF file
+        "bcftools view -T ^{input.bed} {input.bcf} -Ob -o {output.filtered_bcf} && "
+        "bcftools index {output.filtered_bcf}"
+
+rule generate_site_list:
+    """Step 2: Stream the master BCF, subset to the pair, and extract variant sites."""
+    input:
+        bcf = "data/processed/chrX_no_par.bcf",
+        index = "data/processed/chrX_no_par.bcf.csi" # Ensuring index exists
+    output:
+        site_list = "data/processed/site_list/sites_{p1}_{p2}.tsv"
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        # 1. Isolate the pair and filter for SNPs with at least one alt allele
+        # 2. Extract CHROM and POS
+        # 3. Deduplicate multiallelic or overlapping positions using awk
+        "bcftools view -s {wildcards.p1},{wildcards.p2} -v snps -c 1 -Ou {input.bcf} | "
+        "bcftools query -f '%CHROM\t%POS\n' | "
+        "awk '!seen[$0]++' > {output.site_list}"
+
+rule create_paired_vcf:
+    """Step 3: Generate a paired VCF subsetted to the samples and specific site list."""
+    input:
+        bcf = "data/processed/chrX_no_par.bcf",
+        site_list = "data/processed/site_list/sites_{p1}_{p2}.tsv"
+    output:
+        # Wrapping this in temp() tells Snakemake to delete it after the next rule finishes using it
+        vcf = temp("data/processed/tmp/input_{p1}_{p2}.vcf.gz")
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        # 1. Subset the master file to the pair and filter for SNPs
+        # 2. Filter using the custom site list generated in Step 2 (-T)
+        # 3. Output as a compressed VCF (-Oz)
+        "bcftools view -v snps -s {wildcards.p1},{wildcards.p2} -Ou {input.bcf} | "
+        "bcftools view -T {input.site_list} -Oz -o {output.vcf}"
+
+rule diploidifier:
+    """Step 4: Run R script to create a diploid from two haploid samples.
+    Outputs uncompressed VCFs marked as temporary so Snakemake auto-deletes them later.
+    """
+    input:
+        vcf = "data/processed/tmp/input_{p1}_{p2}.vcf.gz"
+    output:
+        # Wrapping these in temp() guarantees they get deleted after the gzip rule runs!
+        test_vcf  = temp("data/processed/diploid/input_{p1}_{p2}_test.vcf"),
+        truth_vcf = temp("data/processed/diploid/input_{p1}_{p2}_truth.vcf")
+    script:
+        "scripts/diploidifier.R"
+
+rule gzip_and_index:
+    """Step 5: Compress the VCFs to .vcf.gz and generate the index."""
+    input:
+        test_vcf  = "data/processed/diploid/input_{p1}_{p2}_test.vcf",
+        truth_vcf = "data/processed/diploid/input_{p1}_{p2}_truth.vcf"
+    output:
+        test_gz   = "data/processed/diploid/input_{p1}_{p2}_test.vcf.gz",
+        test_csi  = "data/processed/diploid/input_{p1}_{p2}_test.vcf.gz.csi",
+        truth_gz  = "data/processed/diploid/input_{p1}_{p2}_truth.vcf.gz"
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        # 1. Compress test VCF and index it
+        "bcftools view -Oz {input.test_vcf} -o {output.test_gz} && "
+        "bcftools index {output.test_gz} && "
+        # 2. Compress truth VCF 
+        "bcftools view -Oz {input.truth_vcf} -o {output.truth_gz}"
+
+rule unzipped_truth_whatshap:
+    """Bypass R-script compression quirks by creating a real, uncompressed 
+    VCF string stream for WhatsHap. Marked as temp so it auto-deletes!
+    """
+    input:
+        truth_gz = "data/processed/diploid/input_{p1}_{p2}_truth.vcf.gz"
+    output:
+        # 💡 Wrapped in temp() -> Deletes itself the moment whatshap_compare finishes!
+        truth_vcf = temp("data/processed/diploid/input_{p1}_{p2}_truth_whatshap.vcf")
+    conda:
+        "envs/bcftools.yaml"
+    shell:
+        "bcftools view -Ov {input.truth_gz} -o {output.truth_vcf}"
+
+rule create_temp_reference_panel:
+    """Step 6: Generate a temporary reference panel by removing the target pair,
+    and running normalization steps against the reference genome.
+    """
+    input:
+        bcf = "data/processed/chrX_no_par.bcf",
+        index = "data/processed/chrX_no_par.bcf.csi",
+        ref_fasta = config["reference_genome"]
+    output:
+        # Marked as temp so both the BCF and its index disappear after phasing
+        ref_bcf = temp("data/processed/tmp/ref_panel_{p1}_{p2}.bcf"),
+        ref_csi = temp("data/processed/tmp/ref_panel_{p1}_{p2}.bcf.csi")
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        # 1. -s^{samples}: Inverse subsetting (removes the two samples)
+        # 2. norm -m -any: Split multiallelic sites into biallelic records
+        # 3. norm -d none -f: Left-align and normalize indels/variants using FASTA
+        "bcftools view -s^{wildcards.p1},{wildcards.p2} -Ou {input.bcf} | "
+        "bcftools norm --no-version -Ou -m -any | "
+        "bcftools norm --no-version -Ob -d none -f {input.ref_fasta} -o {output.ref_bcf} && "
+        "bcftools index {output.ref_bcf}"
+
+rule shapeit_phase:
+    """Step 7: Phase the target test VCF using the custom-built local reference panel."""
+    input:
+        test_gz   = "data/processed/diploid/input_{p1}_{p2}_test.vcf.gz",
+        test_csi  = "data/processed/diploid/input_{p1}_{p2}_test.vcf.gz.csi",
+        ref_bcf   = "data/processed/tmp/ref_panel_{p1}_{p2}.bcf",
+        ref_csi   = "data/processed/tmp/ref_panel_{p1}_{p2}.bcf.csi"
+    output:
+        phased_bcf = temp("data/processed/phased/shapeit_{p1}_{p2}.bcf")
+    params:
+        exec  = config["shapeit"]["phase_common"],
+        gmap  = config["shapeit"]["shapeit_map"],
+        region = "chrX" # Standardized parameter
+    threads: 4 # Dictates internal parallelization for SHAPEIT5
+    shell:
+        "{params.exec} "
+        "--input {input.test_gz} "
+        "--map {params.gmap} "
+        "--reference {input.ref_bcf} "
+        "--region {params.region} "
+        "--thread {threads} "
+        "--output {output.phased_bcf}"
+
+rule convert_phased_bcf_to_vcf:
+    """Step 8: Convert SHAPEIT5 output BCF to uncompressed VCF for WhatsHap.
+    Marked as temp() so it is deleted when the downstream rules finish.
+    """
+    input:
+        phased_bcf = "data/processed/phased/shapeit_{p1}_{p2}.bcf"
+    output:
+        phased_vcf = temp("data/processed/phased/shapeit_{p1}_{p2}.vcf")
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        "bcftools view -Ov {input.phased_bcf} -o {output.phased_vcf}"
+
+rule gzip_phased_vcf:
+    """Step 8b: Compress the phased VCF for vcftools compatibility."""
+    input:
+        phased_vcf = "data/processed/phased/shapeit_{p1}_{p2}.vcf"
+    output:
+        phased_vcf_gz = "data/processed/phased/shapeit_{p1}_{p2}.vcf.gz"
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        "bcftools view -Oz {input.phased_vcf} -o {output.phased_vcf_gz}"
+
+rule evaluate_switch_errors:
+    """Step 9: Compare phased SHAPEIT results against the ground truth using vcftools."""
+    input:
+        phased_vcf = "data/processed/phased/shapeit_{p1}_{p2}.vcf.gz",
+        truth_vcf  = "data/processed/diploid/input_{p1}_{p2}_truth.vcf.gz"
+    output:
+        # vcftools automatically appends '.diff.switch' to the '--out' prefix string
+        switch_err = "data/processed/switch_errors/shapeit/error_{p1}_{p2}.diff.switch"
+    params:
+        # Strip the trailing suffix because vcftools expects a prefix for '--out'
+        out_prefix = "data/processed/switch_errors/shapeit/error_{p1}_{p2}"
+    conda:
+        f"{workflow.basedir}/envs/bcftools.yaml"
+    shell:
+        "vcftools --gzvcf {input.phased_vcf} "
+        "--gzdiff {input.truth_vcf} "
+        "--diff-switch-error "
+        "--out {params.out_prefix}"
+
+rule whatshap_compare:
+    """Step 10: Run WhatsHap evaluation on uncompressed VCF files."""
+    input:
+        # Snakemake is smart: it will now automatically retain this uncompressed truth file 
+        # from rule diploidifier until this rule finishes!
+        truth_vcf  = "data/processed/diploid/input_{p1}_{p2}_truth_whatshap.vcf",
+        phased_vcf = "data/processed/phased/shapeit_{p1}_{p2}.vcf"
+    output:
+        tsv = "data/processed/whatshap/shapeit/eval_{p1}_{p2}.tsv"
+    conda:
+        f"{workflow.basedir}/envs/whatshap.yaml"
+    shell:
+        "whatshap compare "
+        "--ignore-sample-name "
+        "--names truth,shapeit "
+        "--tsv-pairwise {output.tsv} "
+        "{input.truth_vcf} "
+        "{input.phased_vcf}"

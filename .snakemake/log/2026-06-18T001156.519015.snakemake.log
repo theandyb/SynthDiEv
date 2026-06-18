@@ -1,0 +1,417 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job               count
+--------------  -------
+all                   1
+gzip_and_index       25
+total                26
+
+Select jobs to execute...
+
+[Thu Jun 18 00:11:59 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01608_vs_HG02233_test.vcf, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf
+    output: data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf.gz
+    jobid: 99
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:11:59 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_NA11881_vs_NA12760_test.vcf, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf
+    output: data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf.gz
+    jobid: 75
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf.gz
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:11:59 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+    output: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf.gz
+    jobid: 83
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz.csi
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:11:59 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+    output: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf.gz
+    jobid: 91
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf.gz
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:11:59 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01608_vs_NA12760_test.vcf, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf
+    output: data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf.gz
+    jobid: 95
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf.gz
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:01 2026]
+Finished job 99.
+1 of 26 steps (4%) done
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:01 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+    output: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf.gz
+    jobid: 63
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:01 2026]
+Finished job 75.
+2 of 26 steps (8%) done
+Removing temporary output data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.
+Removing temporary output data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf.
+[Thu Jun 18 00:12:01 2026]
+Finished job 91.
+3 of 26 steps (12%) done
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.
+[Thu Jun 18 00:12:01 2026]
+Finished job 83.
+4 of 26 steps (15%) done
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf.
+[Thu Jun 18 00:12:01 2026]
+Finished job 95.
+5 of 26 steps (19%) done
+Removing temporary output data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:01 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00138_vs_NA12760_test.vcf, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf
+    output: data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf.gz
+    jobid: 15
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz.csi
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:12:01 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf
+    output: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf.gz
+    jobid: 1
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:12:01 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01686_vs_NA12760_test.vcf, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf
+    output: data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf.gz
+    jobid: 55
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz.csi
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:12:01 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01608_vs_HG00109_test.vcf, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf
+    output: data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf.gz
+    jobid: 87
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:12:02 2026]
+Finished job 63.
+6 of 26 steps (23%) done
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf.
+
+[Thu Jun 18 00:12:02 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00138_vs_HG01630_test.vcf, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf
+    output: data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf.gz
+    jobid: 11
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf.gz
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:02 2026]
+Finished job 87.
+7 of 26 steps (27%) done
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:02 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+    output: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf.gz
+    jobid: 35
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:02 2026]
+Finished job 1.
+8 of 26 steps (31%) done
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:02 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00252_vs_HG01630_test.vcf, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf
+    output: data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf.gz
+    jobid: 31
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf.gz
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:02 2026]
+Finished job 55.
+9 of 26 steps (35%) done
+Removing temporary output data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.
+[Thu Jun 18 00:12:02 2026]
+Finished job 15.
+10 of 26 steps (38%) done
+Removing temporary output data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.
+Removing temporary output data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:02 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_NA11881_vs_HG00109_test.vcf, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf
+    output: data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf.gz
+    jobid: 67
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf.gz
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:12:02 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01686_vs_HG01630_test.vcf, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf
+    output: data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf.gz
+    jobid: 51
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz.csi
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:12:03 2026]
+Finished job 11.
+11 of 26 steps (42%) done
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_NA11881_vs_HG01630_test.vcf, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf
+    output: data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf.gz
+    jobid: 71
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:03 2026]
+Finished job 35.
+12 of 26 steps (46%) done
+Removing temporary output data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01686_vs_HG00142_test.vcf, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf
+    output: data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf.gz
+    jobid: 43
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf.gz
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:03 2026]
+Finished job 31.
+13 of 26 steps (50%) done
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00252_vs_HG02233_test.vcf, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf
+    output: data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf.gz
+    jobid: 39
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf.gz
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:03 2026]
+Finished job 51.
+14 of 26 steps (54%) done
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_NA11881_vs_HG02233_test.vcf, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf
+    output: data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf.gz
+    jobid: 79
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:03 2026]
+Finished job 67.
+15 of 26 steps (58%) done
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01686_vs_HG02233_test.vcf, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf
+    output: data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf.gz
+    jobid: 59
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf.gz
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:03 2026]
+Finished job 71.
+16 of 26 steps (62%) done
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:03 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf
+    output: data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf.gz
+    jobid: 23
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz.csi
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 43.
+17 of 26 steps (65%) done
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:04 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00138_vs_HG02233_test.vcf, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf
+    output: data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf.gz
+    jobid: 19
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 39.
+18 of 26 steps (69%) done
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:04 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00138_vs_HG00109_test.vcf, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf
+    output: data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf.gz
+    jobid: 7
+    reason: Missing output files: data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf.gz
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 79.
+19 of 26 steps (73%) done
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf.
+Removing temporary output data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:04 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG01686_vs_HG00109_test.vcf, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf
+    output: data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf.gz
+    jobid: 47
+    reason: Missing output files: data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz.csi
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 59.
+20 of 26 steps (77%) done
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:04 2026]
+rule gzip_and_index:
+    input: data/processed/diploid/input_HG00252_vs_HG00109_test.vcf, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf
+    output: data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf.gz
+    jobid: 27
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf.gz
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 23.
+21 of 26 steps (81%) done
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.
+[Thu Jun 18 00:12:04 2026]
+Finished job 19.
+22 of 26 steps (85%) done
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.
+[Thu Jun 18 00:12:04 2026]
+Finished job 7.
+23 of 26 steps (88%) done
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.
+Removing temporary output data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf.
+[Thu Jun 18 00:12:04 2026]
+Finished job 27.
+24 of 26 steps (92%) done
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.
+[Thu Jun 18 00:12:04 2026]
+Finished job 47.
+25 of 26 steps (96%) done
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf.
+Removing temporary output data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:12:04 2026]
+localrule all:
+    input: data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf.gz
+    jobid: 0
+    reason: Input files updated by another job: data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_HG00109_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG00138_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG00109_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG00142_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00252_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf.gz, data/processed/diploid/input_HG00138_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG01686_vs_NA12760_test.vcf.gz, data/processed/diploid/input_NA11881_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG02233_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz, data/processed/diploid/input_HG01686_vs_HG01630_test.vcf.gz.csi, data/processed/diploid/input_HG01608_vs_HG00109_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_NA12760_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG01630_test.vcf.gz, data/processed/diploid/input_HG00138_vs_HG00142_test.vcf.gz.csi, data/processed/diploid/input_HG00252_vs_HG02233_truth.vcf.gz, data/processed/diploid/input_HG01608_vs_NA12760_test.vcf.gz, data/processed/diploid/input_NA11881_vs_HG01630_test.vcf.gz
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:12:04 2026]
+Finished job 0.
+26 of 26 steps (100%) done
+Complete log: .snakemake/log/2026-06-18T001156.519015.snakemake.log

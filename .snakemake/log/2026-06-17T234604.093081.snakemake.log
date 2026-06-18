@@ -1,0 +1,88 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_paired_vcf       20
+diploidifier            25
+total                   46
+
+Select jobs to execute...
+
+[Wed Jun 17 23:46:04 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+    jobid: 69
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:04 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+    jobid: 27
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:04 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf
+    jobid: 18
+    reason: Missing output files: data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf, data/processed/diploid/input_HG00252_vs_HG00142_test.vcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:04 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+    jobid: 63
+    reason: Missing output files: data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:46:04 2026]
+rule diploidifier:
+    input: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    output: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+    jobid: 48
+    reason: Missing output files: data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+WorkflowError:
+Failed to open source file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml'
+Removing output files of failed job diploidifier since they might be corrupted:
+data/processed/diploid/input_HG00252_vs_HG00142_test.vcf, data/processed/diploid/input_HG00252_vs_HG00142_truth.vcf
+WorkflowError:
+Failed to open source file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml'
+Removing output files of failed job diploidifier since they might be corrupted:
+data/processed/diploid/input_NA11881_vs_HG00142_test.vcf, data/processed/diploid/input_NA11881_vs_HG00142_truth.vcf
+WorkflowError:
+Failed to open source file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml'
+Removing output files of failed job diploidifier since they might be corrupted:
+data/processed/diploid/input_HG00252_vs_NA12760_test.vcf, data/processed/diploid/input_HG00252_vs_NA12760_truth.vcf
+WorkflowError:
+Failed to open source file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml'
+Removing output files of failed job diploidifier since they might be corrupted:
+data/processed/diploid/input_HG01608_vs_HG00142_test.vcf, data/processed/diploid/input_HG01608_vs_HG00142_truth.vcf
+WorkflowError:
+Failed to open source file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml
+FileNotFoundError: [Errno 2] No such file or directory: '/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/envs/r_env.yaml'
+Removing output files of failed job diploidifier since they might be corrupted:
+data/processed/diploid/input_HG01608_vs_HG01630_test.vcf, data/processed/diploid/input_HG01608_vs_HG01630_truth.vcf
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-06-17T234604.093081.snakemake.log

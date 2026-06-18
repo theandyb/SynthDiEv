@@ -1,0 +1,4 @@
+reference_genome: "/net/snowwhite/home/beckandy/research/phasing_clean/data/ref_GRCh38.fna"
+shapeit:
+  phase_common: "/net/snowwhite/home/beckandy/software/shapeit5/shapeit5/phase_common/bin/phase_common"
+  shapeit_map: "/net/snowwhite/home/beckandy/software/shapeit5/shapeit5/resources/maps/b38/chrX.b38.gmap.gz"

@@ -1,0 +1,1757 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                          count
+-------------------------  -------
+all                              1
+convert_phased_bcf_to_vcf       23
+evaluate_switch_errors          24
+gzip_phased_vcf                 24
+shapeit_phase                    2
+unzipped_truth_whatshap         25
+whatshap_compare                25
+total                          124
+
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG01630.bcf
+    output: data/processed/phased/shapeit_HG00138_HG01630.vcf
+    jobid: 23
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_HG01630.vcf; Updated input files: data/processed/phased/shapeit_HG00138_HG01630.bcf
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG01630.bcf
+    output: data/processed/phased/shapeit_HG00252_HG01630.vcf
+    jobid: 68
+    reason: Missing output files: data/processed/phased/shapeit_HG00252_HG01630.vcf; Updated input files: data/processed/phased/shapeit_HG00252_HG01630.bcf
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG00109.bcf
+    output: data/processed/phased/shapeit_NA11881_HG00109.vcf
+    jobid: 149
+    reason: Missing output files: data/processed/phased/shapeit_NA11881_HG00109.vcf; Updated input files: data/processed/phased/shapeit_NA11881_HG00109.bcf
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01608_NA12760.vcf
+    output: data/processed/phased/shapeit_HG01608_NA12760.vcf.gz
+    jobid: 211
+    reason: Updated input files: data/processed/phased/shapeit_HG01608_NA12760.vcf
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG00142.bcf
+    output: data/processed/phased/shapeit_HG00138_HG00142.vcf
+    jobid: 3
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_HG00142.vcf; Updated input files: data/processed/phased/shapeit_HG00138_HG00142.bcf
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG00142.bcf
+    output: data/processed/phased/shapeit_NA11881_HG00142.vcf
+    jobid: 140
+    reason: Missing output files: data/processed/phased/shapeit_NA11881_HG00142.vcf; Updated input files: data/processed/phased/shapeit_NA11881_HG00142.bcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG00142.bcf
+    output: data/processed/phased/shapeit_HG01608_HG00142.vcf
+    jobid: 185
+    reason: Missing output files: data/processed/phased/shapeit_HG01608_HG00142.vcf; Updated input files: data/processed/phased/shapeit_HG01608_HG00142.bcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule shapeit_phase:
+    input: data/processed/diploid/input_HG01608_HG00109_test.vcf.gz, data/processed/diploid/input_HG01608_HG00109_test.vcf.gz.csi, data/processed/tmp/ref_panel_HG01608_HG00109.bcf, data/processed/tmp/ref_panel_HG01608_HG00109.bcf.csi
+    output: data/processed/phased/shapeit_HG01608_HG00109.bcf
+    jobid: 195
+    reason: Missing output files: data/processed/phased/shapeit_HG01608_HG00109.bcf; Updated input files: data/processed/tmp/ref_panel_HG01608_HG00109.bcf, data/processed/diploid/input_HG01608_HG00109_test.vcf.gz.csi, data/processed/tmp/ref_panel_HG01608_HG00109.bcf.csi, data/processed/diploid/input_HG01608_HG00109_test.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    threads: 4
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG02233.bcf
+    output: data/processed/phased/shapeit_HG01608_HG02233.vcf
+    jobid: 221
+    reason: Missing output files: data/processed/phased/shapeit_HG01608_HG02233.vcf; Updated input files: data/processed/phased/shapeit_HG01608_HG02233.bcf
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule shapeit_phase:
+    input: data/processed/diploid/input_HG00138_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_HG00109_test.vcf.gz.csi, data/processed/tmp/ref_panel_HG00138_HG00109.bcf, data/processed/tmp/ref_panel_HG00138_HG00109.bcf.csi
+    output: data/processed/phased/shapeit_HG00138_HG00109.bcf
+    jobid: 15
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_HG00109.bcf; Updated input files: data/processed/diploid/input_HG00138_HG00109_test.vcf.gz, data/processed/diploid/input_HG00138_HG00109_test.vcf.gz.csi, data/processed/tmp/ref_panel_HG00138_HG00109.bcf.csi, data/processed/tmp/ref_panel_HG00138_HG00109.bcf
+    wildcards: p1=HG00138, p2=HG00109
+    threads: 4
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00138_NA12760.bcf
+    output: data/processed/phased/shapeit_HG00138_NA12760.vcf
+    jobid: 32
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_NA12760.vcf; Updated input files: data/processed/phased/shapeit_HG00138_NA12760.bcf
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00252_NA12760.bcf
+    output: data/processed/phased/shapeit_HG00252_NA12760.vcf
+    jobid: 77
+    reason: Missing output files: data/processed/phased/shapeit_HG00252_NA12760.vcf; Updated input files: data/processed/phased/shapeit_HG00252_NA12760.bcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01686_NA12760.bcf
+    output: data/processed/phased/shapeit_HG01686_NA12760.vcf
+    jobid: 122
+    reason: Missing output files: data/processed/phased/shapeit_HG01686_NA12760.vcf; Updated input files: data/processed/phased/shapeit_HG01686_NA12760.bcf
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_NA11881_NA12760.bcf
+    output: data/processed/phased/shapeit_NA11881_NA12760.vcf
+    jobid: 167
+    reason: Missing output files: data/processed/phased/shapeit_NA11881_NA12760.vcf; Updated input files: data/processed/phased/shapeit_NA11881_NA12760.bcf
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 68.
+1 of 124 steps (1%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG01630.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG01630.vcf
+    output: data/processed/phased/shapeit_HG00252_HG01630.vcf.gz
+    jobid: 67
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG01630.vcf
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 185.
+2 of 124 steps (2%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG00142.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 122.
+3 of 124 steps (2%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_NA12760.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01686_NA12760.vcf
+    output: data/processed/phased/shapeit_HG01686_NA12760.vcf.gz
+    jobid: 121
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_NA12760.vcf
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG00142.vcf
+    output: data/processed/phased/shapeit_HG01608_HG00142.vcf.gz
+    jobid: 184
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG00142.vcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 221.
+4 of 124 steps (3%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG02233.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 77.
+5 of 124 steps (4%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_NA12760.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 140.
+6 of 124 steps (5%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG00142.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 211.
+7 of 124 steps (6%) done
+[Thu Jun 18 00:57:00 2026]
+Finished job 32.
+8 of 124 steps (6%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_NA12760.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 3.
+9 of 124 steps (7%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG00142.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 149.
+10 of 124 steps (8%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG00109.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 23.
+11 of 124 steps (9%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG01630.bcf.
+[Thu Jun 18 00:57:00 2026]
+Finished job 167.
+12 of 124 steps (10%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_NA12760.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG01630.bcf
+    output: data/processed/phased/shapeit_HG01686_HG01630.vcf
+    jobid: 113
+    reason: Missing output files: data/processed/phased/shapeit_HG01686_HG01630.vcf; Updated input files: data/processed/phased/shapeit_HG01686_HG01630.bcf
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG02233.vcf
+    output: data/processed/phased/shapeit_HG01608_HG02233.vcf.gz
+    jobid: 220
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG02233.vcf
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00138_NA12760.vcf
+    output: data/processed/phased/shapeit_HG00138_NA12760.vcf.gz
+    jobid: 31
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_NA12760.vcf
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00252_NA12760.vcf
+    output: data/processed/phased/shapeit_HG00252_NA12760.vcf.gz
+    jobid: 76
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_NA12760.vcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG00142.vcf
+    output: data/processed/phased/shapeit_HG00138_HG00142.vcf.gz
+    jobid: 2
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG00142.vcf
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_NA11881_NA12760.vcf
+    output: data/processed/phased/shapeit_NA11881_NA12760.vcf.gz
+    jobid: 166
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_NA12760.vcf
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG01630.vcf
+    output: data/processed/phased/shapeit_HG00138_HG01630.vcf.gz
+    jobid: 22
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG01630.vcf
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG00109.vcf
+    output: data/processed/phased/shapeit_NA11881_HG00109.vcf.gz
+    jobid: 148
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG00109.vcf
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG00142.vcf
+    output: data/processed/phased/shapeit_NA11881_HG00142.vcf.gz
+    jobid: 139
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG00142.vcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:00 2026]
+Finished job 67.
+13 of 124 steps (10%) done
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG01630.bcf
+    output: data/processed/phased/shapeit_NA11881_HG01630.vcf
+    jobid: 158
+    reason: Missing output files: data/processed/phased/shapeit_NA11881_HG01630.vcf; Updated input files: data/processed/phased/shapeit_NA11881_HG01630.bcf
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 113.
+14 of 124 steps (11%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG01630.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG01630.vcf
+    output: data/processed/phased/shapeit_HG01686_HG01630.vcf.gz
+    jobid: 112
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG01630.vcf
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 184.
+15 of 124 steps (12%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG00142.bcf
+    output: data/processed/phased/shapeit_HG01686_HG00142.vcf
+    jobid: 95
+    reason: Missing output files: data/processed/phased/shapeit_HG01686_HG00142.vcf; Updated input files: data/processed/phased/shapeit_HG01686_HG00142.bcf
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 2.
+16 of 124 steps (13%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:00 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG02233.bcf
+    output: data/processed/phased/shapeit_HG00252_HG02233.vcf
+    jobid: 86
+    reason: Missing output files: data/processed/phased/shapeit_HG00252_HG02233.vcf; Updated input files: data/processed/phased/shapeit_HG00252_HG02233.bcf
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:00 2026]
+Finished job 76.
+17 of 124 steps (14%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG02233.bcf
+    output: data/processed/phased/shapeit_NA11881_HG02233.vcf
+    jobid: 176
+    reason: Missing output files: data/processed/phased/shapeit_NA11881_HG02233.vcf; Updated input files: data/processed/phased/shapeit_NA11881_HG02233.bcf
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 139.
+18 of 124 steps (15%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 31.
+19 of 124 steps (15%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 166.
+20 of 124 steps (16%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 121.
+21 of 124 steps (17%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 22.
+22 of 124 steps (18%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 220.
+23 of 124 steps (19%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 148.
+24 of 124 steps (19%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 158.
+25 of 124 steps (20%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG01630.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG00109.bcf
+    output: data/processed/phased/shapeit_HG00252_HG00109.vcf
+    jobid: 59
+    reason: Missing output files: data/processed/phased/shapeit_HG00252_HG00109.vcf; Updated input files: data/processed/phased/shapeit_HG00252_HG00109.bcf
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG00109.bcf
+    output: data/processed/phased/shapeit_HG01686_HG00109.vcf
+    jobid: 104
+    reason: Missing output files: data/processed/phased/shapeit_HG01686_HG00109.vcf; Updated input files: data/processed/phased/shapeit_HG01686_HG00109.bcf
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG01630.vcf
+    output: data/processed/phased/shapeit_NA11881_HG01630.vcf.gz
+    jobid: 157
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG01630.vcf
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG00142.bcf
+    output: data/processed/phased/shapeit_HG00252_HG00142.vcf
+    jobid: 50
+    reason: Missing output files: data/processed/phased/shapeit_HG00252_HG00142.vcf; Updated input files: data/processed/phased/shapeit_HG00252_HG00142.bcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00252_HG02233_truth.vcf.gz
+    output: data/processed/diploid/input_HG00252_HG02233_truth_whatshap.vcf
+    jobid: 247
+    reason: Missing output files: data/processed/diploid/input_HG00252_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG02233.bcf
+    output: data/processed/phased/shapeit_HG01686_HG02233.vcf
+    jobid: 131
+    reason: Missing output files: data/processed/phased/shapeit_HG01686_HG02233.vcf; Updated input files: data/processed/phased/shapeit_HG01686_HG02233.bcf
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01608_HG02233.vcf.gz, data/processed/diploid/input_HG01608_HG02233_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01608_HG02233.diff.switch
+    jobid: 219
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG02233.vcf.gz
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG02233.bcf
+    output: data/processed/phased/shapeit_HG00138_HG02233.vcf
+    jobid: 41
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_HG02233.vcf; Updated input files: data/processed/phased/shapeit_HG00138_HG02233.bcf
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 95.
+26 of 124 steps (21%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG00142.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG00142.vcf
+    output: data/processed/phased/shapeit_HG01686_HG00142.vcf.gz
+    jobid: 94
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00142.vcf
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:01 2026]
+Finished job 112.
+27 of 124 steps (22%) done
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_NA11881_HG00109_truth.vcf.gz
+    output: data/processed/diploid/input_NA11881_HG00109_truth_whatshap.vcf
+    jobid: 261
+    reason: Missing output files: data/processed/diploid/input_NA11881_HG00109_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 176.
+28 of 124 steps (23%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG02233.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_NA11881_HG02233.vcf
+    output: data/processed/phased/shapeit_NA11881_HG02233.vcf.gz
+    jobid: 175
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG02233.vcf
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 104.
+29 of 124 steps (23%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG00109.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG00109.vcf
+    output: data/processed/phased/shapeit_HG01686_HG00109.vcf.gz
+    jobid: 103
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00109.vcf
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 86.
+30 of 124 steps (24%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG02233.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG02233.vcf
+    output: data/processed/phased/shapeit_HG00252_HG02233.vcf.gz
+    jobid: 85
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG02233.vcf
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 41.
+31 of 124 steps (25%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG02233.bcf.
+[Thu Jun 18 00:57:01 2026]
+Finished job 247.
+32 of 124 steps (26%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 131.
+33 of 124 steps (27%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG02233.bcf.
+[Thu Jun 18 00:57:01 2026]
+Finished job 59.
+34 of 124 steps (27%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG00109.bcf.
+[Thu Jun 18 00:57:01 2026]
+Finished job 50.
+35 of 124 steps (28%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG00142.bcf.
+[Thu Jun 18 00:57:01 2026]
+Finished job 219.
+36 of 124 steps (29%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 157.
+37 of 124 steps (30%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00252_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_HG02233.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00252_HG02233.tsv
+    jobid: 246
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00252_HG02233.tsv; Input files updated by another job: data/processed/phased/shapeit_HG00252_HG02233.vcf, data/processed/diploid/input_HG00252_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01686_HG02233.vcf
+    output: data/processed/phased/shapeit_HG01686_HG02233.vcf.gz
+    jobid: 130
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG02233.vcf
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG02233.vcf
+    output: data/processed/phased/shapeit_HG00138_HG02233.vcf.gz
+    jobid: 40
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG02233.vcf
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01608_HG00142_truth.vcf.gz
+    output: data/processed/diploid/input_HG01608_HG00142_truth_whatshap.vcf
+    jobid: 269
+    reason: Missing output files: data/processed/diploid/input_HG01608_HG00142_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG00109.vcf
+    output: data/processed/phased/shapeit_HG00252_HG00109.vcf.gz
+    jobid: 58
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG00109.vcf
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_NA11881_NA12760.vcf.gz, data/processed/diploid/input_NA11881_NA12760_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_NA11881_NA12760.diff.switch
+    jobid: 165
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_NA12760.vcf.gz
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00252_HG00142.vcf
+    output: data/processed/phased/shapeit_HG00252_HG00142.vcf.gz
+    jobid: 49
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG00142.vcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 261.
+38 of 124 steps (31%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 94.
+39 of 124 steps (31%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 175.
+40 of 124 steps (32%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 103.
+41 of 124 steps (33%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00138_NA12760.vcf.gz, data/processed/diploid/input_HG00138_NA12760_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00138_NA12760.diff.switch
+    jobid: 30
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_NA12760.vcf.gz
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_NA11881_HG01630.vcf.gz, data/processed/diploid/input_NA11881_HG01630_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_NA11881_HG01630.diff.switch
+    jobid: 156
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG01630.vcf.gz
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_NA11881_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG00109.vcf
+    output: data/processed/whatshap/shapeit/eval_NA11881_HG00109.tsv
+    jobid: 260
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_NA11881_HG00109.tsv; Input files updated by another job: data/processed/diploid/input_NA11881_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG00109.vcf
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01686_HG01630_truth.vcf.gz
+    output: data/processed/diploid/input_HG01686_HG01630_truth_whatshap.vcf
+    jobid: 253
+    reason: Missing output files: data/processed/diploid/input_HG01686_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 85.
+42 of 124 steps (34%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01608_NA12760_truth.vcf.gz
+    output: data/processed/diploid/input_HG01608_NA12760_truth_whatshap.vcf
+    jobid: 275
+    reason: Missing output files: data/processed/diploid/input_HG01608_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:01 2026]
+Finished job 58.
+43 of 124 steps (35%) done
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00252_HG00109.vcf.gz, data/processed/diploid/input_HG00252_HG00109_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00252_HG00109.diff.switch
+    jobid: 57
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG00109.vcf.gz
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 40.
+44 of 124 steps (35%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01686_HG00109.vcf.gz, data/processed/diploid/input_HG01686_HG00109_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01686_HG00109.diff.switch
+    jobid: 102
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00109.vcf.gz
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 165.
+45 of 124 steps (36%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 253.
+46 of 124 steps (37%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01686_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG01630.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01686_HG01630.tsv
+    jobid: 252
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01686_HG01630.tsv; Input files updated by another job: data/processed/diploid/input_HG01686_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG01630.vcf
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00138_HG02233_truth.vcf.gz
+    output: data/processed/diploid/input_HG00138_HG02233_truth_whatshap.vcf
+    jobid: 237
+    reason: Missing output files: data/processed/diploid/input_HG00138_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 269.
+47 of 124 steps (38%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 130.
+48 of 124 steps (39%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 275.
+49 of 124 steps (40%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 49.
+50 of 124 steps (40%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00252_NA12760.vcf.gz, data/processed/diploid/input_HG00252_NA12760_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00252_NA12760.diff.switch
+    jobid: 75
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_NA12760.vcf.gz
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01608_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_NA12760.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01608_NA12760.tsv
+    jobid: 274
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01608_NA12760.tsv; Input files updated by another job: data/processed/diploid/input_HG01608_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01608_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG00142.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01608_HG00142.tsv
+    jobid: 268
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01608_HG00142.tsv; Input files updated by another job: data/processed/diploid/input_HG01608_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG00142.vcf
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00138_HG01630.vcf.gz, data/processed/diploid/input_HG00138_HG01630_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00138_HG01630.diff.switch
+    jobid: 21
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG01630.vcf.gz
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:01 2026]
+Finished job 156.
+51 of 124 steps (41%) done
+[Thu Jun 18 00:57:01 2026]
+Finished job 30.
+52 of 124 steps (42%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01686_NA12760_truth.vcf.gz
+    output: data/processed/diploid/input_HG01686_NA12760_truth_whatshap.vcf
+    jobid: 255
+    reason: Missing output files: data/processed/diploid/input_HG01686_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:01 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00252_NA12760_truth.vcf.gz
+    output: data/processed/diploid/input_HG00252_NA12760_truth_whatshap.vcf
+    jobid: 245
+    reason: Missing output files: data/processed/diploid/input_HG00252_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:01 2026]
+Finished job 57.
+53 of 124 steps (43%) done
+
+[Thu Jun 18 00:57:02 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00138_HG01630_truth.vcf.gz
+    output: data/processed/diploid/input_HG00138_HG01630_truth_whatshap.vcf
+    jobid: 233
+    reason: Missing output files: data/processed/diploid/input_HG00138_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 237.
+54 of 124 steps (44%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00138_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG02233.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00138_HG02233.tsv
+    jobid: 236
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00138_HG02233.tsv; Input files updated by another job: data/processed/diploid/input_HG00138_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG02233.vcf
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 102.
+55 of 124 steps (44%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01608_HG00109_truth.vcf.gz
+    output: data/processed/diploid/input_HG01608_HG00109_truth_whatshap.vcf
+    jobid: 271
+    reason: Missing output files: data/processed/diploid/input_HG01608_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 255.
+56 of 124 steps (45%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01686_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_NA12760.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01686_NA12760.tsv
+    jobid: 254
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01686_NA12760.tsv; Input files updated by another job: data/processed/phased/shapeit_HG01686_NA12760.vcf, data/processed/diploid/input_HG01686_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 245.
+57 of 124 steps (46%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00252_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_NA12760.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00252_NA12760.tsv
+    jobid: 244
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00252_NA12760.tsv; Input files updated by another job: data/processed/diploid/input_HG00252_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_NA12760.vcf
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 21.
+58 of 124 steps (47%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00252_HG00109_truth.vcf.gz
+    output: data/processed/diploid/input_HG00252_HG00109_truth_whatshap.vcf
+    jobid: 241
+    reason: Missing output files: data/processed/diploid/input_HG00252_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 75.
+59 of 124 steps (48%) done
+[Thu Jun 18 00:57:02 2026]
+Finished job 233.
+60 of 124 steps (48%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_NA11881_HG01630_truth.vcf.gz
+    output: data/processed/diploid/input_NA11881_HG01630_truth_whatshap.vcf
+    jobid: 263
+    reason: Missing output files: data/processed/diploid/input_NA11881_HG01630_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00138_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG01630.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00138_HG01630.tsv
+    jobid: 232
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00138_HG01630.tsv; Input files updated by another job: data/processed/diploid/input_HG00138_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG01630.vcf
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:02 2026]
+Finished job 271.
+61 of 124 steps (49%) done
+
+[Thu Jun 18 00:57:02 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01686_HG02233.vcf.gz, data/processed/diploid/input_HG01686_HG02233_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01686_HG02233.diff.switch
+    jobid: 129
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG02233.vcf.gz
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 241.
+62 of 124 steps (50%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00252_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_HG00109.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00252_HG00109.tsv
+    jobid: 240
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00252_HG00109.tsv; Input files updated by another job: data/processed/phased/shapeit_HG00252_HG00109.vcf, data/processed/diploid/input_HG00252_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 263.
+63 of 124 steps (51%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_NA11881_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG01630.vcf
+    output: data/processed/whatshap/shapeit/eval_NA11881_HG01630.tsv
+    jobid: 262
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_NA11881_HG01630.tsv; Input files updated by another job: data/processed/phased/shapeit_NA11881_HG01630.vcf, data/processed/diploid/input_NA11881_HG01630_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 129.
+64 of 124 steps (52%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01686_HG00142_truth.vcf.gz
+    output: data/processed/diploid/input_HG01686_HG00142_truth_whatshap.vcf
+    jobid: 249
+    reason: Missing output files: data/processed/diploid/input_HG01686_HG00142_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:02 2026]
+Finished job 249.
+65 of 124 steps (52%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:02 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01686_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG00142.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01686_HG00142.tsv
+    jobid: 248
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01686_HG00142.tsv; Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00142.vcf, data/processed/diploid/input_HG01686_HG00142_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 246.
+66 of 124 steps (53%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG02233.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_NA11881_HG02233.vcf.gz, data/processed/diploid/input_NA11881_HG02233_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_NA11881_HG02233.diff.switch
+    jobid: 174
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG02233.vcf.gz
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 260.
+67 of 124 steps (54%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG00109.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00138_HG02233.vcf.gz, data/processed/diploid/input_HG00138_HG02233_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00138_HG02233.diff.switch
+    jobid: 39
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG02233.vcf.gz
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 252.
+68 of 124 steps (55%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG01630.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01686_HG02233_truth.vcf.gz
+    output: data/processed/diploid/input_HG01686_HG02233_truth_whatshap.vcf
+    jobid: 257
+    reason: Missing output files: data/processed/diploid/input_HG01686_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 174.
+69 of 124 steps (56%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00138_HG00142.vcf.gz, data/processed/diploid/input_HG00138_HG00142_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00138_HG00142.diff.switch
+    jobid: 1
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG00142.vcf.gz
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 39.
+70 of 124 steps (56%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_NA11881_NA12760_truth.vcf.gz
+    output: data/processed/diploid/input_NA11881_NA12760_truth_whatshap.vcf
+    jobid: 265
+    reason: Missing output files: data/processed/diploid/input_NA11881_NA12760_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 257.
+71 of 124 steps (57%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:06 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01686_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG02233.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01686_HG02233.tsv
+    jobid: 256
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01686_HG02233.tsv; Input files updated by another job: data/processed/diploid/input_HG01686_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG02233.vcf
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:06 2026]
+Finished job 240.
+72 of 124 steps (58%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG00109.vcf.
+[Thu Jun 18 00:57:06 2026]
+Finished job 236.
+73 of 124 steps (59%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG02233.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01608_NA12760.vcf.gz, data/processed/diploid/input_HG01608_NA12760_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01608_NA12760.diff.switch
+    jobid: 210
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_NA12760.vcf.gz
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_NA11881_HG00142_truth.vcf.gz
+    output: data/processed/diploid/input_NA11881_HG00142_truth_whatshap.vcf
+    jobid: 259
+    reason: Missing output files: data/processed/diploid/input_NA11881_HG00142_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:07 2026]
+Finished job 265.
+74 of 124 steps (60%) done
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_NA11881_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_NA12760.vcf
+    output: data/processed/whatshap/shapeit/eval_NA11881_NA12760.tsv
+    jobid: 264
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_NA11881_NA12760.tsv; Input files updated by another job: data/processed/diploid/input_NA11881_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_NA12760.vcf
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 1.
+75 of 124 steps (60%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00138_HG00109_truth.vcf.gz
+    output: data/processed/diploid/input_HG00138_HG00109_truth_whatshap.vcf
+    jobid: 231
+    reason: Missing output files: data/processed/diploid/input_HG00138_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 268.
+76 of 124 steps (61%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG00142.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01686_HG01630.vcf.gz, data/processed/diploid/input_HG01686_HG01630_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01686_HG01630.diff.switch
+    jobid: 111
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG01630.vcf.gz
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 232.
+77 of 124 steps (62%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG01630.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_NA11881_HG02233_truth.vcf.gz
+    output: data/processed/diploid/input_NA11881_HG02233_truth_whatshap.vcf
+    jobid: 267
+    reason: Missing output files: data/processed/diploid/input_NA11881_HG02233_truth_whatshap.vcf
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 244.
+78 of 124 steps (63%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_NA12760.vcf.
+[Thu Jun 18 00:57:07 2026]
+Finished job 254.
+79 of 124 steps (64%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_NA12760.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00252_HG01630.vcf.gz, data/processed/diploid/input_HG00252_HG01630_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00252_HG01630.diff.switch
+    jobid: 66
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG01630.vcf.gz
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_NA11881_HG00109.vcf.gz, data/processed/diploid/input_NA11881_HG00109_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_NA11881_HG00109.diff.switch
+    jobid: 147
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG00109.vcf.gz
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:07 2026]
+Finished job 274.
+80 of 124 steps (65%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_NA12760.vcf.
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00252_HG02233.vcf.gz, data/processed/diploid/input_HG00252_HG02233_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00252_HG02233.diff.switch
+    jobid: 84
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG02233.vcf.gz
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 259.
+81 of 124 steps (65%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_NA11881_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG00142.vcf
+    output: data/processed/whatshap/shapeit/eval_NA11881_HG00142.tsv
+    jobid: 258
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_NA11881_HG00142.tsv; Input files updated by another job: data/processed/diploid/input_NA11881_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG00142.vcf
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 262.
+82 of 124 steps (66%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG01630.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01686_HG00109_truth.vcf.gz
+    output: data/processed/diploid/input_HG01686_HG00109_truth_whatshap.vcf
+    jobid: 251
+    reason: Missing output files: data/processed/diploid/input_HG01686_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 210.
+83 of 124 steps (67%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01686_NA12760.vcf.gz, data/processed/diploid/input_HG01686_NA12760_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01686_NA12760.diff.switch
+    jobid: 120
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_NA12760.vcf.gz
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 231.
+84 of 124 steps (68%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00138_HG00142_truth.vcf.gz
+    output: data/processed/diploid/input_HG00138_HG00142_truth_whatshap.vcf
+    jobid: 229
+    reason: Missing output files: data/processed/diploid/input_HG00138_HG00142_truth_whatshap.vcf
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 267.
+85 of 124 steps (69%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_NA11881_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG02233.vcf
+    output: data/processed/whatshap/shapeit/eval_NA11881_HG02233.tsv
+    jobid: 266
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_NA11881_HG02233.tsv; Input files updated by another job: data/processed/diploid/input_NA11881_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_NA11881_HG02233.vcf
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 111.
+86 of 124 steps (69%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01608_HG02233_truth.vcf.gz
+    output: data/processed/diploid/input_HG01608_HG02233_truth_whatshap.vcf
+    jobid: 277
+    reason: Missing output files: data/processed/diploid/input_HG01608_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 66.
+87 of 124 steps (70%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00252_HG00142.vcf.gz, data/processed/diploid/input_HG00252_HG00142_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00252_HG00142.diff.switch
+    jobid: 48
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00252_HG00142.vcf.gz
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 147.
+88 of 124 steps (71%) done
+[Thu Jun 18 00:57:07 2026]
+Finished job 251.
+89 of 124 steps (72%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01686_HG00142.vcf.gz, data/processed/diploid/input_HG01686_HG00142_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01686_HG00142.diff.switch
+    jobid: 93
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00142.vcf.gz
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01686_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG01686_HG00109.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01686_HG00109.tsv
+    jobid: 250
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01686_HG00109.tsv; Input files updated by another job: data/processed/phased/shapeit_HG01686_HG00109.vcf, data/processed/diploid/input_HG01686_HG00109_truth_whatshap.vcf
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 18 00:57:07 2026]
+Finished job 84.
+90 of 124 steps (73%) done
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00252_HG01630_truth.vcf.gz
+    output: data/processed/diploid/input_HG00252_HG01630_truth_whatshap.vcf
+    jobid: 243
+    reason: Missing output files: data/processed/diploid/input_HG00252_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 229.
+91 of 124 steps (73%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00138_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG00142.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00138_HG00142.tsv
+    jobid: 228
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00138_HG00142.tsv; Input files updated by another job: data/processed/diploid/input_HG00138_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG00142.vcf
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 277.
+92 of 124 steps (74%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01608_HG02233_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG02233.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01608_HG02233.tsv
+    jobid: 276
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01608_HG02233.tsv; Input files updated by another job: data/processed/phased/shapeit_HG01608_HG02233.vcf, data/processed/diploid/input_HG01608_HG02233_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 120.
+93 of 124 steps (75%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01608_HG00142.vcf.gz, data/processed/diploid/input_HG01608_HG00142_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01608_HG00142.diff.switch
+    jobid: 183
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG00142.vcf.gz
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 243.
+94 of 124 steps (76%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00252_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_HG01630.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00252_HG01630.tsv
+    jobid: 242
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00252_HG01630.tsv; Input files updated by another job: data/processed/phased/shapeit_HG00252_HG01630.vcf, data/processed/diploid/input_HG00252_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 48.
+95 of 124 steps (77%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00138_NA12760_truth.vcf.gz
+    output: data/processed/diploid/input_HG00138_NA12760_truth_whatshap.vcf
+    jobid: 235
+    reason: Missing output files: data/processed/diploid/input_HG00138_NA12760_truth_whatshap.vcf
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 93.
+96 of 124 steps (77%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_NA11881_HG00142.vcf.gz, data/processed/diploid/input_NA11881_HG00142_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_NA11881_HG00142.diff.switch
+    jobid: 138
+    reason: Input files updated by another job: data/processed/phased/shapeit_NA11881_HG00142.vcf.gz
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 248.
+97 of 124 steps (78%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG00142.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG00252_HG00142_truth.vcf.gz
+    output: data/processed/diploid/input_HG00252_HG00142_truth_whatshap.vcf
+    jobid: 239
+    reason: Missing output files: data/processed/diploid/input_HG00252_HG00142_truth_whatshap.vcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 183.
+98 of 124 steps (79%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule unzipped_truth_whatshap:
+    input: data/processed/diploid/input_HG01608_HG01630_truth.vcf.gz
+    output: data/processed/diploid/input_HG01608_HG01630_truth_whatshap.vcf
+    jobid: 273
+    reason: Missing output files: data/processed/diploid/input_HG01608_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 235.
+99 of 124 steps (80%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00138_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_NA12760.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00138_NA12760.tsv
+    jobid: 234
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00138_NA12760.tsv; Input files updated by another job: data/processed/diploid/input_HG00138_NA12760_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_NA12760.vcf
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:07 2026]
+Finished job 239.
+100 of 124 steps (81%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:07 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00252_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_HG00142.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00252_HG00142.tsv
+    jobid: 238
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00252_HG00142.tsv; Input files updated by another job: data/processed/diploid/input_HG00252_HG00142_truth_whatshap.vcf, data/processed/phased/shapeit_HG00252_HG00142.vcf
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:08 2026]
+Finished job 138.
+101 of 124 steps (81%) done
+[Thu Jun 18 00:57:08 2026]
+Finished job 273.
+102 of 124 steps (82%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:08 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01608_HG01630_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG01630.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01608_HG01630.tsv
+    jobid: 272
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01608_HG01630.tsv; Input files updated by another job: data/processed/diploid/input_HG01608_HG01630_truth_whatshap.vcf
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:09 2026]
+Finished job 15.
+103 of 124 steps (83%) done
+Removing temporary output data/processed/tmp/ref_panel_HG00138_HG00109.bcf.csi.
+Removing temporary output data/processed/tmp/ref_panel_HG00138_HG00109.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:09 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG00109.bcf
+    output: data/processed/phased/shapeit_HG00138_HG00109.vcf
+    jobid: 14
+    reason: Missing output files: data/processed/phased/shapeit_HG00138_HG00109.vcf; Input files updated by another job: data/processed/phased/shapeit_HG00138_HG00109.bcf
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:09 2026]
+Finished job 14.
+104 of 124 steps (84%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG00109.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:09 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG00138_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG00109.vcf
+    output: data/processed/whatshap/shapeit/eval_HG00138_HG00109.tsv
+    jobid: 230
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG00138_HG00109.tsv; Input files updated by another job: data/processed/diploid/input_HG00138_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG00138_HG00109.vcf
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:09 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG00138_HG00109.vcf
+    output: data/processed/phased/shapeit_HG00138_HG00109.vcf.gz
+    jobid: 13
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG00109.vcf
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:09 2026]
+Finished job 13.
+105 of 124 steps (85%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:09 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG00138_HG00109.vcf.gz, data/processed/diploid/input_HG00138_HG00109_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG00138_HG00109.diff.switch
+    jobid: 12
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG00138_HG00109.vcf.gz
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:10 2026]
+Finished job 12.
+106 of 124 steps (85%) done
+[Thu Jun 18 00:57:10 2026]
+Finished job 195.
+107 of 124 steps (86%) done
+Removing temporary output data/processed/tmp/ref_panel_HG01608_HG00109.bcf.
+Removing temporary output data/processed/tmp/ref_panel_HG01608_HG00109.bcf.csi.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:10 2026]
+rule convert_phased_bcf_to_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG00109.bcf
+    output: data/processed/phased/shapeit_HG01608_HG00109.vcf
+    jobid: 194
+    reason: Missing output files: data/processed/phased/shapeit_HG01608_HG00109.vcf; Input files updated by another job: data/processed/phased/shapeit_HG01608_HG00109.bcf
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:10 2026]
+Finished job 194.
+108 of 124 steps (87%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG00109.bcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:10 2026]
+rule whatshap_compare:
+    input: data/processed/diploid/input_HG01608_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG00109.vcf
+    output: data/processed/whatshap/shapeit/eval_HG01608_HG00109.tsv
+    jobid: 270
+    reason: Missing output files: data/processed/whatshap/shapeit/eval_HG01608_HG00109.tsv; Input files updated by another job: data/processed/diploid/input_HG01608_HG00109_truth_whatshap.vcf, data/processed/phased/shapeit_HG01608_HG00109.vcf
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 18 00:57:10 2026]
+rule gzip_phased_vcf:
+    input: data/processed/phased/shapeit_HG01608_HG00109.vcf
+    output: data/processed/phased/shapeit_HG01608_HG00109.vcf.gz
+    jobid: 193
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG00109.vcf
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:10 2026]
+Finished job 193.
+109 of 124 steps (88%) done
+Select jobs to execute...
+
+[Thu Jun 18 00:57:10 2026]
+rule evaluate_switch_errors:
+    input: data/processed/phased/shapeit_HG01608_HG00109.vcf.gz, data/processed/diploid/input_HG01608_HG00109_truth.vcf.gz
+    output: data/processed/switch_errors/shapeit/error_HG01608_HG00109.diff.switch
+    jobid: 192
+    reason: Input files updated by another job: data/processed/phased/shapeit_HG01608_HG00109.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:11 2026]
+Finished job 192.
+110 of 124 steps (89%) done
+[Thu Jun 18 00:57:11 2026]
+Finished job 256.
+111 of 124 steps (90%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG02233.vcf.
+[Thu Jun 18 00:57:11 2026]
+Finished job 264.
+112 of 124 steps (90%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_NA12760.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 266.
+113 of 124 steps (91%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG02233.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 258.
+114 of 124 steps (92%) done
+Removing temporary output data/processed/phased/shapeit_NA11881_HG00142.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 228.
+115 of 124 steps (93%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG00142.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 242.
+116 of 124 steps (94%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG01630.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 238.
+117 of 124 steps (94%) done
+Removing temporary output data/processed/phased/shapeit_HG00252_HG00142.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 276.
+118 of 124 steps (95%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG02233.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 250.
+119 of 124 steps (96%) done
+Removing temporary output data/processed/phased/shapeit_HG01686_HG00109.vcf.
+[Thu Jun 18 00:57:12 2026]
+Finished job 234.
+120 of 124 steps (97%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_NA12760.vcf.
+[Thu Jun 18 00:57:13 2026]
+Finished job 272.
+121 of 124 steps (98%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG01630.vcf.
+[Thu Jun 18 00:57:14 2026]
+Finished job 230.
+122 of 124 steps (98%) done
+Removing temporary output data/processed/phased/shapeit_HG00138_HG00109.vcf.
+[Thu Jun 18 00:57:15 2026]
+Finished job 270.
+123 of 124 steps (99%) done
+Removing temporary output data/processed/phased/shapeit_HG01608_HG00109.vcf.
+Select jobs to execute...
+
+[Thu Jun 18 00:57:15 2026]
+localrule all:
+    input: data/processed/switch_errors/shapeit/error_HG00138_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_HG00138_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG00138_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_HG00138_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_HG00138_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG02233.diff.switch, data/processed/whatshap/shapeit/eval_HG00138_HG00142.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG00138_NA12760.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG02233.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG00142.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG00252_NA12760.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG02233.tsv, data/processed/whatshap/shapeit/eval_HG01686_HG00142.tsv, data/processed/whatshap/shapeit/eval_HG01686_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG01686_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG01686_NA12760.tsv, data/processed/whatshap/shapeit/eval_HG01686_HG02233.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG00142.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG00109.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG01630.tsv, data/processed/whatshap/shapeit/eval_NA11881_NA12760.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG02233.tsv, data/processed/whatshap/shapeit/eval_HG01608_HG00142.tsv, data/processed/whatshap/shapeit/eval_HG01608_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG01608_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG01608_NA12760.tsv, data/processed/whatshap/shapeit/eval_HG01608_HG02233.tsv
+    jobid: 0
+    reason: Input files updated by another job: data/processed/whatshap/shapeit/eval_HG01686_HG00142.tsv, data/processed/switch_errors/shapeit/error_HG01686_NA12760.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_NA12760.diff.switch, data/processed/whatshap/shapeit/eval_HG00252_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG01630.tsv, data/processed/switch_errors/shapeit/error_NA11881_NA12760.diff.switch, data/processed/whatshap/shapeit/eval_HG01686_HG02233.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG01630.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG01630.tsv, data/processed/switch_errors/shapeit/error_HG00138_HG00142.diff.switch, data/processed/whatshap/shapeit/eval_NA11881_HG02233.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG02233.tsv, data/processed/switch_errors/shapeit/error_HG01608_HG02233.diff.switch, data/processed/whatshap/shapeit/eval_HG01608_HG02233.tsv, data/processed/switch_errors/shapeit/error_HG00252_HG01630.diff.switch, data/processed/whatshap/shapeit/eval_HG01608_HG00142.tsv, data/processed/whatshap/shapeit/eval_HG00252_HG00142.tsv, data/processed/switch_errors/shapeit/error_NA11881_HG01630.diff.switch, data/processed/switch_errors/shapeit/error_HG00138_NA12760.diff.switch, data/processed/whatshap/shapeit/eval_NA11881_HG00109.tsv, data/processed/switch_errors/shapeit/error_HG01686_HG01630.diff.switch, data/processed/whatshap/shapeit/eval_HG01608_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG00138_HG00142.tsv, data/processed/switch_errors/shapeit/error_HG01608_NA12760.diff.switch, data/processed/whatshap/shapeit/eval_HG01686_HG01630.tsv, data/processed/whatshap/shapeit/eval_HG01608_HG00109.tsv, data/processed/whatshap/shapeit/eval_NA11881_HG00142.tsv, data/processed/switch_errors/shapeit/error_HG00138_HG01630.diff.switch, data/processed/whatshap/shapeit/eval_HG00138_HG00109.tsv, data/processed/whatshap/shapeit/eval_HG01686_HG00109.tsv, data/processed/switch_errors/shapeit/error_HG01686_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_NA11881_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG00109.diff.switch, data/processed/switch_errors/shapeit/error_HG01686_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG00142.diff.switch, data/processed/switch_errors/shapeit/error_HG01608_HG00109.diff.switch, data/processed/whatshap/shapeit/eval_HG00252_NA12760.tsv, data/processed/whatshap/shapeit/eval_NA11881_NA12760.tsv, data/processed/switch_errors/shapeit/error_NA11881_HG00109.diff.switch, data/processed/whatshap/shapeit/eval_HG00138_NA12760.tsv, data/processed/switch_errors/shapeit/error_HG00252_HG00142.diff.switch, data/processed/whatshap/shapeit/eval_HG01686_NA12760.tsv, data/processed/switch_errors/shapeit/error_NA11881_HG00142.diff.switch, data/processed/whatshap/shapeit/eval_HG01608_NA12760.tsv, data/processed/switch_errors/shapeit/error_HG00138_HG00109.diff.switch, data/processed/whatshap/shapeit/eval_HG00252_HG02233.tsv, data/processed/switch_errors/shapeit/error_HG00138_HG02233.diff.switch, data/processed/switch_errors/shapeit/error_HG00252_HG02233.diff.switch
+    resources: tmpdir=/tmp
+
+[Thu Jun 18 00:57:15 2026]
+Finished job 0.
+124 of 124 steps (100%) done
+Complete log: .snakemake/log/2026-06-18T005658.980812.snakemake.log

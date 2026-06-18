@@ -1,0 +1,394 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+create_paired_vcf       25
+total                   26
+
+Select jobs to execute...
+
+[Wed Jun 17 23:31:11 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    jobid: 11
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz
+    wildcards: p1=HG00138, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:11 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG02233.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    jobid: 41
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz
+    wildcards: p1=NA11881, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:11 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    jobid: 17
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz
+    wildcards: p1=HG00252, p2=HG01630
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:11 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    jobid: 19
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz
+    wildcards: p1=HG00252, p2=NA12760
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:11 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG00142.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    jobid: 33
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz
+    wildcards: p1=NA11881, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:14 2026]
+Finished job 19.
+1 of 26 steps (4%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:14 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_NA12760.tsv
+    output: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    jobid: 39
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz
+    wildcards: p1=NA11881, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:14 2026]
+Finished job 41.
+2 of 26 steps (8%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:14 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    jobid: 1
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz
+    wildcards: p1=HG00138, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:14 2026]
+Finished job 17.
+3 of 26 steps (12%) done
+[Wed Jun 17 23:31:14 2026]
+Finished job 33.
+4 of 26 steps (15%) done
+[Wed Jun 17 23:31:14 2026]
+Finished job 11.
+5 of 26 steps (19%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:14 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    jobid: 51
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    wildcards: p1=HG01608, p2=HG02233
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:14 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    jobid: 5
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz
+    wildcards: p1=HG00138, p2=HG00109
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 17 23:31:14 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    jobid: 21
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz
+    wildcards: p1=HG00252, p2=HG02233
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Wed Jun 17 23:31:17 2026]
+Finished job 39.
+6 of 26 steps (23%) done
+
+[Wed Jun 17 23:31:17 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    jobid: 25
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz
+    wildcards: p1=HG01686, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:17 2026]
+Finished job 5.
+7 of 26 steps (27%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:17 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    jobid: 27
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz
+    wildcards: p1=HG01686, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:17 2026]
+Finished job 1.
+8 of 26 steps (31%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:17 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    jobid: 29
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz
+    wildcards: p1=HG01686, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:17 2026]
+Finished job 51.
+9 of 26 steps (35%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:17 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG02233.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    jobid: 31
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz
+    wildcards: p1=HG01686, p2=HG02233
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:17 2026]
+Finished job 21.
+10 of 26 steps (38%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:17 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG00109.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    jobid: 35
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz
+    wildcards: p1=NA11881, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:20 2026]
+Finished job 25.
+11 of 26 steps (42%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:20 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_NA11881_vs_HG01630.tsv
+    output: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    jobid: 37
+    reason: Missing output files: data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz
+    wildcards: p1=NA11881, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:20 2026]
+Finished job 35.
+12 of 26 steps (46%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:20 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01686_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    jobid: 23
+    reason: Missing output files: data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz
+    wildcards: p1=HG01686, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:20 2026]
+Finished job 31.
+13 of 26 steps (50%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:20 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    jobid: 49
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz
+    wildcards: p1=HG01608, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:20 2026]
+Finished job 27.
+14 of 26 steps (54%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:20 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    jobid: 47
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz
+    wildcards: p1=HG01608, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:20 2026]
+Finished job 29.
+15 of 26 steps (58%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:20 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    jobid: 45
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz
+    wildcards: p1=HG01608, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:23 2026]
+Finished job 37.
+16 of 26 steps (62%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG00109.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    jobid: 15
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz
+    wildcards: p1=HG00252, p2=HG00109
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:23 2026]
+Finished job 49.
+17 of 26 steps (65%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00252_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    jobid: 13
+    reason: Missing output files: data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz
+    wildcards: p1=HG00252, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:23 2026]
+Finished job 23.
+18 of 26 steps (69%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_NA12760.tsv
+    output: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    jobid: 9
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz
+    wildcards: p1=HG00138, p2=NA12760
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:23 2026]
+Finished job 47.
+19 of 26 steps (73%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG01608_vs_HG00142.tsv
+    output: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    jobid: 43
+    reason: Missing output files: data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz
+    wildcards: p1=HG01608, p2=HG00142
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:23 2026]
+Finished job 45.
+20 of 26 steps (77%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:23 2026]
+rule create_paired_vcf:
+    input: data/processed/chrX_no_par.bcf, data/processed/site_list/sites_HG00138_vs_HG01630.tsv
+    output: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    jobid: 7
+    reason: Missing output files: data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz
+    wildcards: p1=HG00138, p2=HG01630
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:26 2026]
+Finished job 7.
+21 of 26 steps (81%) done
+[Wed Jun 17 23:31:26 2026]
+Finished job 13.
+22 of 26 steps (85%) done
+[Wed Jun 17 23:31:26 2026]
+Finished job 43.
+23 of 26 steps (88%) done
+[Wed Jun 17 23:31:26 2026]
+Finished job 9.
+24 of 26 steps (92%) done
+[Wed Jun 17 23:31:26 2026]
+Finished job 15.
+25 of 26 steps (96%) done
+Select jobs to execute...
+
+[Wed Jun 17 23:31:26 2026]
+localrule all:
+    input: data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz, data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz, data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz, data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz, data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz, data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz, data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz, data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz, data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz, data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz, data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz, data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz, data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz, data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz, data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz, data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz, data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz, data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz, data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz, data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz, data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz, data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz, data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    jobid: 0
+    reason: Input files updated by another job: data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz, data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz, data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz, data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz, data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz, data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz, data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz, data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz, data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz, data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz, data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz, data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz, data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz, data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz, data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz, data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz, data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz, data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz, data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz, data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz, data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz, data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 23:31:26 2026]
+Finished job 0.
+26 of 26 steps (100%) done
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG00142.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG00109.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG01630.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00138_vs_NA12760.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00138_vs_HG02233.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG00142.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG00109.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG01630.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00252_vs_NA12760.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG00252_vs_HG02233.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG00142.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG00109.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG01630.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01686_vs_NA12760.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01686_vs_HG02233.vcf.gz.
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG00142.vcf.gz.
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG00109.vcf.gz.
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG01630.vcf.gz.
+Removing temporary output data/processed/tmp/input_NA11881_vs_NA12760.vcf.gz.
+Removing temporary output data/processed/tmp/input_NA11881_vs_HG02233.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG00142.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG00109.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG01630.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01608_vs_NA12760.vcf.gz.
+Removing temporary output data/processed/tmp/input_HG01608_vs_HG02233.vcf.gz.
+Complete log: .snakemake/log/2026-06-17T233110.677762.snakemake.log

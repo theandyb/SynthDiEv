@@ -1,0 +1,109 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job             count
+------------  -------
+all                 1
+remove_par          1
+run_analysis        5
+total               7
+
+Select jobs to execute...
+
+[Wed Jun 17 21:23:20 2026]
+rule remove_par:
+    input: data/raw/chrX.bcf, data/raw/chrX_par.bed
+    output: data/processed/chrX_no_par.bcf
+    jobid: 2
+    reason: Missing output files: data/processed/chrX_no_par.bcf
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 2.
+1 of 7 steps (14%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+rule run_analysis:
+    input: data/processed/chrX_no_par.bcf, data/raw/chrX_par.bed
+    output: data/processed/switches_beagle_4.txt, data/processed/switches_eagle_4.txt, data/processed/switches_shapeit_4.txt
+    jobid: 5
+    reason: Missing output files: data/processed/switches_beagle_4.txt, data/processed/switches_shapeit_4.txt, data/processed/switches_eagle_4.txt; Input files updated by another job: data/processed/chrX_no_par.bcf
+    wildcards: i=4
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 5.
+2 of 7 steps (29%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+rule run_analysis:
+    input: data/processed/chrX_no_par.bcf, data/raw/chrX_par.bed
+    output: data/processed/switches_beagle_5.txt, data/processed/switches_eagle_5.txt, data/processed/switches_shapeit_5.txt
+    jobid: 6
+    reason: Missing output files: data/processed/switches_beagle_5.txt, data/processed/switches_shapeit_5.txt, data/processed/switches_eagle_5.txt; Input files updated by another job: data/processed/chrX_no_par.bcf
+    wildcards: i=5
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 6.
+3 of 7 steps (43%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+rule run_analysis:
+    input: data/processed/chrX_no_par.bcf, data/raw/chrX_par.bed
+    output: data/processed/switches_beagle_3.txt, data/processed/switches_eagle_3.txt, data/processed/switches_shapeit_3.txt
+    jobid: 4
+    reason: Missing output files: data/processed/switches_eagle_3.txt, data/processed/switches_shapeit_3.txt, data/processed/switches_beagle_3.txt; Input files updated by another job: data/processed/chrX_no_par.bcf
+    wildcards: i=3
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 4.
+4 of 7 steps (57%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+rule run_analysis:
+    input: data/processed/chrX_no_par.bcf, data/raw/chrX_par.bed
+    output: data/processed/switches_beagle_1.txt, data/processed/switches_eagle_1.txt, data/processed/switches_shapeit_1.txt
+    jobid: 1
+    reason: Missing output files: data/processed/switches_beagle_1.txt, data/processed/switches_eagle_1.txt, data/processed/switches_shapeit_1.txt; Input files updated by another job: data/processed/chrX_no_par.bcf
+    wildcards: i=1
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 1.
+5 of 7 steps (71%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+rule run_analysis:
+    input: data/processed/chrX_no_par.bcf, data/raw/chrX_par.bed
+    output: data/processed/switches_beagle_2.txt, data/processed/switches_eagle_2.txt, data/processed/switches_shapeit_2.txt
+    jobid: 3
+    reason: Missing output files: data/processed/switches_eagle_2.txt, data/processed/switches_beagle_2.txt, data/processed/switches_shapeit_2.txt; Input files updated by another job: data/processed/chrX_no_par.bcf
+    wildcards: i=2
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 3.
+6 of 7 steps (86%) done
+Select jobs to execute...
+
+[Wed Jun 17 21:23:47 2026]
+localrule all:
+    input: data/processed/switches_beagle_1.txt, data/processed/switches_beagle_2.txt, data/processed/switches_beagle_3.txt, data/processed/switches_beagle_4.txt, data/processed/switches_beagle_5.txt, data/processed/switches_eagle_1.txt, data/processed/switches_eagle_2.txt, data/processed/switches_eagle_3.txt, data/processed/switches_eagle_4.txt, data/processed/switches_eagle_5.txt, data/processed/switches_shapeit_1.txt, data/processed/switches_shapeit_2.txt, data/processed/switches_shapeit_3.txt, data/processed/switches_shapeit_4.txt, data/processed/switches_shapeit_5.txt
+    jobid: 0
+    reason: Input files updated by another job: data/processed/switches_shapeit_2.txt, data/processed/switches_beagle_4.txt, data/processed/switches_eagle_1.txt, data/processed/switches_eagle_2.txt, data/processed/switches_eagle_4.txt, data/processed/switches_beagle_1.txt, data/processed/switches_shapeit_5.txt, data/processed/switches_eagle_5.txt, data/processed/switches_beagle_2.txt, data/processed/switches_beagle_5.txt, data/processed/switches_shapeit_1.txt, data/processed/switches_eagle_3.txt, data/processed/switches_shapeit_3.txt, data/processed/switches_shapeit_4.txt, data/processed/switches_beagle_3.txt
+    resources: tmpdir=/tmp
+
+[Wed Jun 17 21:23:47 2026]
+Finished job 0.
+7 of 7 steps (100%) done
+Complete log: .snakemake/log/2026-06-17T212320.083561.snakemake.log

@@ -1,3 +1,0 @@
-TypeError in file /net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile, line 23:
-Workflow.shellcmd() takes 2 positional arguments but 4 were given
-  File "/net/snowwhite/home/beckandy/research/SynthDiEv/workflow/Snakefile", line 23, in <module>
